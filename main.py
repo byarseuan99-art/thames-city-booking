@@ -88,7 +88,7 @@ def init_db():
         cursor.execute("""
             INSERT INTO users (id, username, password, pin, fullName, email, phone, department, jobTitle, headOfDepartment, role, status, createdAt, emailNotifications)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, ("admin-1", "admin", "TCSB123!", "1234", "System Administrator", "admin@thamescity.com", "0000000000", "Management", "Admin", "Active", datetime.now().isoformat(), 1))
+        """, ("admin-1", "admin", "TCSB123!", "1234", "System Administrator", "admin@thamescity.com", "0000000000", "Management", "Admin",  "Yes", "admin", "Active", datetime.now().isoformat(), 1))
     else:
         cursor.execute("UPDATE users SET password = ? WHERE username = ?", ("TCSB123!", "admin"))
     
