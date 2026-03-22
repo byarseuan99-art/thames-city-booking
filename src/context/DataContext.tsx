@@ -129,7 +129,7 @@ interface DataContextType {
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
-const API_URL = import.meta.env.VITE_API_URL || '';
+const API_URL = import.meta.env.VITE_API_URL || 'https://thames-city-booking.onrender.com';
 const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || API_URL || window.location.origin;
 
 const GYM_CAPACITY = 10;
