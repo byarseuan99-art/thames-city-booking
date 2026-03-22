@@ -90,7 +90,7 @@ def init_db():
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, ("admin-1", "admin", "TCSB123!", "1234", "System Administrator", "admin@thamescity.com", "0000000000", "Management", "Admin",  "Yes", "Admin", "Active", datetime.now().isoformat(), 1))
     else:
-        cursor.execute("UPDATE users SET password = ?, role = ? WHERE username = ?", ("TCSB123!", "Admin", "admin"))
+        cursor.execute("UPDATE users SET password = ?, role = ?, status = ?, headOfDepartment = ?, jobTitle = ? WHERE username = ?""", ("TCSB123!", "Admin", "Active", "Yes", "Admin", "admin"))
     
     conn.commit()
     conn.close()
